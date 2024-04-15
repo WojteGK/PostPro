@@ -6,12 +6,12 @@ import Navbar from './components/Navbar/Navbar'
 import PostSection from './components/PostSection/PostSection'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [postCount, setPostCount] = useState(10); // domyślna wartość
 
   return (
     <>
       <Navbar></Navbar>
-      <PostSection></PostSection>
+      <PostSection postCount={postCount}/>
     </>
   )
 }
