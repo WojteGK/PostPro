@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Comment from './Comment/Comment';
+import './CommentSection.css';
 
 export default function CommentSection({ postId }) {
     const defaultCount = 1;
@@ -13,8 +14,9 @@ export default function CommentSection({ postId }) {
       }, [commentCount]);
 
     return (
-        <div>
-          <select defaultValue={defaultCount} onChange={(e) => setCommentCount(Number(e.target.value))}>
+        <div className="comment-section">
+          <label htmlFor="commentCountSelect">Comment count: </label>
+          <select className='commentCountSelect' defaultValue={defaultCount} onChange={(e) => setCommentCount(Number(e.target.value))}>
             <option value="1">1</option>
             <option value="5">5</option>
             <option value="10">10</option>

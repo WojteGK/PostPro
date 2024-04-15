@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Navbar.css';
 
 export default function Navbar({ onRangeChange }) {
   const [startRange, setStartRange] = useState(''); // Filtrowanie od ilości znaków
@@ -15,7 +16,7 @@ export default function Navbar({ onRangeChange }) {
   };
 
   return (
-    <div>
+    <div className='navbar'>
       <h2>Wybierz zakres znaków jakie mają zawierać posty:</h2>
       {/* Sekcja wyboru początkowego zakresu */}
       <label>

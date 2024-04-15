@@ -1,0 +1,25 @@
+.comment-section {
+   background-color: #171717;
+   color: #d9d9d9;
+   padding: 20px;
+   border-radius: 5px;
+ }
+ 
+ .comment-section label,
+ .comment-section select {
+   display: block;
+   text-align: left; /* Wyjustowanie do lewej strony */
+ }
+ 
+ .comment-section select {
+   background-color: #ce7227;
+   color: #d9d9d9;
+   border: none;
+   padding: 5px 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .comment-section select:focus {
+   outline: none;
+   border: 2px solid #ffbb3d;
+ }

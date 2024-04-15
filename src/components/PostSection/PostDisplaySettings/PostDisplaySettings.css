@@ -1,0 +1,22 @@
+.post-display-settings {
+   background-color: #171717;
+   color: #d9d9d9;
+   padding: 20px;
+   border-radius: 5px;
+ }
+ 
+ .post-display-settings label {
+   color: #ce7227;
+ }
+ 
+ .post-display-settings select {
+   background-color: #ffcfa3;
+   color: #171717;
+   border: none;
+   padding: 5px;
+ }
+ 
+ .post-display-settings select:focus {
+   outline: none;
+   border: 2px solid #ffbb3d;
+ }
