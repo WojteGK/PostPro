@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function  () {
-   const name = "";
-   const commentContent = "";
+export default function Comment({ comment }) {
+   const { name, email, body } = comment;
 
   return (
    <div className="comment">
       <div className="comment-details">
-         <h3 className="name">{name}</h3>
-         <p className="content">{commentContent}</p>
+         <p className="email" >User mail: {email}</p>
+         <h3 className="name">User name: {name}</h3>
+         <p className="content">{body}</p>
       </div>
    </div>
   )
