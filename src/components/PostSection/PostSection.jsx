@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Post from './Post/Post';
 import PostDisplaySettings from './PostDisplaySettings/PostDisplaySettings';
+import './PostSection.css';
 
 export default function PostSection(){
     const [posts, setPosts] = useState([]);
@@ -13,7 +14,7 @@ export default function PostSection(){
       }, [postCount]);
 
     return (
-        <div>
+        <div className="post-section">
           <PostDisplaySettings setPostCount={setPostCount} />
           {posts.map((post, index) => (
             <Post key={index} post={post} />

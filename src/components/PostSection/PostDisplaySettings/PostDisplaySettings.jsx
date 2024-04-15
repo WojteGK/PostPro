@@ -1,10 +1,12 @@
+import './PostDisplaySettings.css';
+
 export default function PostDisplaySettings({ setPostCount }) {
   const handleNumberChange = (e) => {
     setPostCount(Number(e.target.value));
   };
 
   return (
-    <div>
+    <div className="post-display-settings">
       <label htmlFor="number">Number of posts: </label>
       <select className="number" onChange={handleNumberChange} defaultValue={10}>
         <option value="1">1</option>

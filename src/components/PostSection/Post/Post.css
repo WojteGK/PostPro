@@ -1,0 +1,15 @@
+.post {
+   background-color: #171717;
+   color: #d9d9d9;
+   padding: 20px;
+   border-radius: 5px;
+   margin-bottom: 20px;
+ }
+ 
+ .post h2 {
+   color: #ce7227;
+ }
+ 
+ .post p {
+   color: #ffcfa3;
+ }
