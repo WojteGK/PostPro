@@ -1,7 +1,8 @@
 import React from 'react'
+import Comment from './Comment/Comment'
 
 export default function CommentSection() {
-   const numberOfComments = 5;
+   const numberOfComments = "";
   return (
          <>
             {Array.from({ length: numberOfComments }, (_, index) => (
