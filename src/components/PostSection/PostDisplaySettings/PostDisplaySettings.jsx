@@ -1,24 +1,19 @@
-import React from 'react'
+export default function PostDisplaySettings({ setPostCount }) {
+  const handleNumberChange = (e) => {
+    setPostCount(Number(e.target.value));
+  };
 
-function NumberOptions() {
-    const numbers = [1, 5, 10, 15, 20, 25];
-  
-    return (
-      <div>
-        <h2>Wybierz liczbę wyświetlanych postów:</h2>
-        <select>
-          {numbers.map((number, index) => (
-            <option key={index} value={number}>{number}</option>
-          ))}     
-        </select>
-      </div>
-    );
-  }
-
-export default function PostDisplaySettings(){
-    return(
-        <>
-            <NumberOptions/>
-        </>
-    )
+  return (
+    <div>
+      <label htmlFor="number">Number of posts: </label>
+      <select className="number" onChange={handleNumberChange} defaultValue={10}>
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="25">25</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+  );
 }
