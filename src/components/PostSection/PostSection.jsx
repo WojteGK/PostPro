@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
+// src/components/PostSection/PostSection.jsx
+
+import React from 'react';
 import Post from './Post/Post';
-import PostDisplaySettings from './PostDisplaySettings/PostDisplaySettings';
 import './PostSection.css';
 
-export default function PostSection(){
-    const [posts, setPosts] = useState([]);
-    const [postCount, setPostCount] = useState(10); // domyślna wartość
+function PostSection({ posts, postCount, range }) {
+  // Filtruj posty na podstawie ilości znaków i wyświetlaj tylko określoną ilość postów
+  const filteredPosts = posts
+    .filter(post => post.body.length >= range.start && post.body.length <= range.end)
+    .slice(0, postCount);
 
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts/')
-          .then((response) => response.json())
-          .then((json) => setPosts(json.slice(0, postCount)));
-      }, [postCount]);
-
-    return (
-        <div className="post-section">
-          <PostDisplaySettings setPostCount={setPostCount} />
-          {posts.map((post, index) => (
-            <Post key={index} post={post} />
-          ))}
-        </div>
-    )
+  return (
+    <div className='post-section'>
+      {filteredPosts.length > 0 ? (
+        filteredPosts.map((post, index) => <Post key={index} post={post} />)
+      ) : (
+        <p>Nie znaleziono postów spełniających wymagania.</p>
+      )}
+    </div>
+  );
 }
+
+export default PostSection;
