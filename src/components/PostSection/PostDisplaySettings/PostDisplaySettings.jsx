@@ -1,6 +1,7 @@
+import React from 'react';
 import './PostDisplaySettings.css';
 
-export default function PostDisplaySettings({ setPostCount }) {
+function PostDisplaySettings({ setPostCount }) {
   const handleNumberChange = (e) => {
     setPostCount(Number(e.target.value));
   };
@@ -19,3 +20,5 @@ export default function PostDisplaySettings({ setPostCount }) {
     </div>
   );
 }
+
+export default PostDisplaySettings;

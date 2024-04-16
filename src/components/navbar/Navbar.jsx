@@ -1,34 +1,47 @@
-import React, { useState } from 'react';
-import './Navbar.css';
+// src/components/Navbar/Navbar.jsx
 
-export default function Navbar({ onRangeChange }) {
-  const [startRange, setStartRange] = useState(''); // Filtrowanie od ilości znaków
-  const [endRange, setEndRange] = useState(''); // Filtrowanie do ilości znaków
+import React, { useState } from 'react';
+
+function Navbar({ onRangeChange }) {
+  const [startRange, setStartRange] = useState('');
+  const [endRange, setEndRange] = useState('');
 
   const handleStartChange = (event) => {
     setStartRange(event.target.value);
-    onRangeChange(event.target.value, endRange);
   };
 
   const handleEndChange = (event) => {
     setEndRange(event.target.value);
-    onRangeChange(startRange, event.target.value);
+  };
+
+  const handleApplyFilters = () => {
+    if (startRange === '' || endRange === '') {
+      alert('Pola "Od" i "Do" nie mogą być puste.');
+      return;
+    }
+
+    if (parseInt(endRange) < parseInt(startRange)) {
+      alert('Wartość "Do" nie może być mniejsza niż wartość "Od".');
+      return;
+    }
+
+    onRangeChange(startRange, endRange);
   };
 
   return (
     <div className='navbar'>
       <h2>Wybierz zakres znaków jakie mają zawierać posty:</h2>
-      {/* Sekcja wyboru początkowego zakresu */}
       <label>
         Od:
         <input type="number" value={startRange} onChange={handleStartChange} />
       </label>
-
-      {/* Sekcja wyboru końcowego zakresu */}
       <label>
         Do:
         <input type="number" value={endRange} onChange={handleEndChange} />
       </label>
+      <button onClick={handleApplyFilters}>apply</button>
     </div>
   );
 }
+
+export default Navbar;
