@@ -7,6 +7,7 @@ export default function Post({ post }) {
         <div className="post">
             <h2>{post.title}</h2>
             <p>{post.body}</p>
+            <img src={post.image} alt={post.title} />
             <CommentSection postId={post.id} />
         </div>
     );
