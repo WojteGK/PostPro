@@ -26,3 +26,6 @@ dist-ssr
 # IDE
 .package.json
 package-lock.json
+
+# Python cache files
+__pycache__
