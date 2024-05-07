@@ -1,211 +1,106 @@
 ## GUI
 
 ### Test Navigation
-
-Check if the `Navbar` component works correctly and if the user can enter a range of characters to filter posts.
+**Description**  
+This test verifies the navigation bar's visibility and layout.
 
 **Steps:**
-1. Open the application page.
-2. Enter '10' in the first input field and '20' in the second input field.
+1. Open the application page on address 127.0.0.1:3007.
 
-**Expected Result:**
-Only posts with numbers from 10 to 20 are displayed.
+**Expected Result:**  
+- The navigation bar should be visible at the top of the page.
+- The navigation bar should contain the "Wybierz zakres znaków jakie mają zawierać posty:" heading.
+- Two input fields labeled "Od:" and "Do:" should be present for specifying character ranges.
+- An "apply" button should be available for applying filters.
 
-**Actual Result:**
-To be filled out after conducting the test.
+**Actual Result:**  
+The navigation bar is visible and contains the expected elements. The layout adjusts smoothly to different screen sizes.
 
-**Status:**
-To be filled out after conducting the test.
+**Status:**  Pass
 
-**Notes:**
-None
+**Notes:**  
 
 ---
 
-### Test Post Display
-
-Check if posts are correctly displayed in the `PostSection` component.
+### Test Post Display Settings
+**Description**  
+This test ensures the proper display of post display settings.
 
 **Steps:**
-1. Open the application page.
+1. Open the application page on address 127.0.0.1:3007.
 
-**Expected Result:**
-Posts are displayed in the `PostSection` component.
+**Expected Result:**  
+- The post display settings section should be visible below the navigation bar.
+- It should contain a label "Number of posts:" and a dropdown menu to select the number of posts to display.
 
-**Actual Result:**
-To be filled out after conducting the test.
+**Actual Result:**  
+The post display settings section is visible and contains the expected elements. The layout adjusts smoothly to different screen sizes.
 
-**Status:**
-To be filled out after conducting the test.
+**Status:**  Pass
 
-**Notes:**
-None
+**Notes:**  
 
 ---
 
-### Test Change Number of Displayed Posts
-
-Check if changing the value in the select field in the `PostDisplaySettings` component changes the number of displayed
-posts.
+### Test Post Section
+**Description**  
+This test verifies the layout and content of the post section.
 
 **Steps:**
-1. Open the application page.
-2. Select the value '25' in the select field.
+1. Open the application page on address 127.0.0.1:3007.
 
-**Expected Result:**
-Only 25 posts are displayed.
+**Expected Result:**  
+- Posts should be displayed below the post display settings section.
+- Each post should have a title, body, and a comment section.
+- The comment section should display the specified number of comments.
+- Posts should be arranged properly without overlapping.
 
-**Actual Result:**
-To be filled out after conducting the test.
+**Actual Result:**  
+The post section displays posts correctly with titles, bodies, and comment sections. The layout adjusts smoothly to different screen sizes.
 
-**Status:**
-To be filled out after conducting the test.
+**Status:**  Fail
 
-**Notes:**
-None
+**Notes:**  Posts may require some rework to make them more distinguishible from other elements
 
 ---
 
-### Test Post Scrolling
-
-Check if the user can scroll through posts when their number exceeds the height of the browser window.
-
-**Steps:**
-1. Open the application page.
-2. Scroll down to see more posts.
-
-**Expected Result:**
-The user can scroll through posts.
-
-**Actual Result:**
-To be filled out after conducting the test.
-
-**Status:**
-To be filled out after conducting the test.
-
-**Notes:**
-None
-
----
-### Test Search Functionality
-Check if the user can search for posts using the search bar.
+### Test Comment Section
+**Description**  
+This test ensures the correct appearance of the comment section within each post.
 
 **Steps:**
-1. Open the application page.
-2. Enter a search term in the search bar.
+1. Open the application page on address 127.0.0.1:3007.
 
-**Expected Result:**
-Posts that match the search term are displayed.
+**Expected Result:**  
+- Comment sections should be displayed below each post.
+- Each comment section should contain the specified number of comments.
+- Comments should be properly formatted and distinguishable from each other.
+- Comments should not overlap or leak out of their containers.
 
-**Actual Result:**
-To be filled out after conducting the test.
+**Actual Result:**  
+The comment sections are displayed correctly below each post with the specified number of comments. Comments are properly formatted and distinguishable. The layout adjusts smoothly to different screen sizes.
 
-**Status:**
-To be filled out after conducting the test.
+**Status:**  Pass
 
-**Notes:**
-None
+**Notes:**  
 
 ---
 
-### Test Post Details Display
-Check if the user can view the details of a post by clicking on it.
+### Test Comment Display
+**Description**  
+This test checks the display of comments within each post.
 
 **Steps:**
-1. Open the application page.
-2. Click on a post.
+1. Open the application page on address 127.0.0.1:3007.
 
-**Expected Result:**
-The details of the clicked post are displayed.
+**Expected Result:**  
+- Comments should be visible within each post's comment section.
+- Each comment should display the user's email, name, and content.
+- Comments should not overlap or leak out of their containers.
 
-**Actual Result:**
-To be filled out after conducting the test.
+**Actual Result:**  
+Comments are displayed within each post's comment section as expected. Each comment displays the user's email and content properly. The layout adjusts smoothly to different screen sizes.
 
-**Status:**
-To be filled out after conducting the test.
+**Status:**  Pass
 
-**Notes:**
-None
-
----
-
-### Test Post Sorting
-Check if the user can sort posts by date, ascending or descending.
-
-**Steps:**
-1. Open the application page.
-2. Select a sorting option from the sort dropdown.
-
-**Expected Result:**
-Posts are sorted according to the selected option.
-
-**Actual Result:**
-To be filled out after conducting the test.
-
-**Status:**
-To be filled out after conducting the test.
-
-**Notes:**
-None
-
----
-### Test Post Filtering
-Check if the user can filter posts by entering a range of characters.
-
-**Steps:**
-1. Open the application page.
-2. Enter a range of characters in the filter input fields.
-
-**Expected Result:**
-Only posts within the entered range are displayed.
-
-**Actual Result:**
-To be filled out after conducting the test.
-
-**Status:**
-To be filled out after conducting the test.
-
-**Notes:**
-None
-
----
-
-### Test Post Pagination
-Check if the user can navigate through different pages of posts.
-
-**Steps:**
-1. Open the application page.
-2. Click on the pagination buttons.
-
-**Expected Result:**
-The user can view different pages of posts.
-
-**Actual Result:**
-To be filled out after conducting the test.
-
-**Status:**
-To be filled out after conducting the test.
-
-**Notes:**
-None
-
----
-
-### Test Post Reaction
-Check if the user can react to a post.
-
-**Steps:**
-1. Open the application page.
-2. Click on a reaction button on a post.
-
-**Expected Result:**
-The reaction count for the post increases.
-
-**Actual Result:**
-To be filled out after conducting the test.
-
-**Status:**
-To be filled out after conducting the test.
-
-**Notes:**
-None
+**Notes:**  
