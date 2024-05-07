@@ -1,7 +1,3 @@
----
-layout: default
-title: manual-test-scenarios
----
 ## GUI
 
 ### Test Navigation
