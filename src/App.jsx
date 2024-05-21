@@ -7,7 +7,7 @@ import PostDisplaySettings from './components/PostSection/PostDisplaySettings/Po
 
 function App() {
   const [postCount, setPostCount] = useState(10);
-  const [range, setRange] = useState({ start: '', end: '' });
+  const [range, setRange] = useState({ start: '1', end: '10000' });
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
